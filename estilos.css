@@ -1,0 +1,1289 @@
+
+:root {
+  --verde: #526747;
+  --verde-oscuro: #344936;
+  --verde-claro: #e5eadb;
+  --crema: #f7f3e9;
+  --tierra: #a87950;
+  --texto: #393a30;
+  --blanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--crema);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ENCABEZADO Y MENÚ */
+
+.encabezado {
+  background: var(--verde-oscuro);
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.menu a {
+  color: white;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: #d8c39b;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* PORTADA */
+
+.portada {
+  min-height: 440px;
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(120deg, #344936, #71805a);
+  color: white;
+}
+
+.portada-contenido {
+  max-width: 700px;
+}
+
+.portada h1 {
+  font-size: clamp(35px, 6vw, 58px);
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+.portada p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.etiqueta {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #e4d4ad;
+}
+
+.etiqueta.verde {
+  color: var(--verde);
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 25px;
+  background: #e5d5b5;
+  color: var(--verde-oscuro);
+  padding: 12px 22px;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background: white;
+}
+
+/* SECCIONES */
+
+.seccion {
+  padding: 65px 8%;
+}
+
+.seccion h2 {
+  color: var(--verde-oscuro);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.descripcion {
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+.fondo-claro {
+  background: #ececdf;
+}
+
+.encabezado-pagina {
+  text-align: center;
+  padding: 65px 8%;
+  background: var(--verde-claro);
+}
+
+.encabezado-pagina h1 {
+  color: var(--verde-oscuro);
+  font-size: clamp(30px, 5vw, 43px);
+  margin: 12px 0;
+}
+
+.encabezado-pagina p {
+  max-width: 750px;
+  margin: auto;
+}
+
+/* TARJETAS */
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.tarjeta {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e3dfd2;
+}
+
+.tarjeta h3 {
+  color: var(--verde);
+  margin-bottom: 10px;
+}
+
+.bloque-texto {
+  max-width: 900px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.lista {
+  padding-left: 25px;
+  max-width: 800px;
+}
+
+.lista li {
+  margin: 12px 0;
+}
+
+/* GALERÍA DEL INICIO */
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ENTREVISTAS: FOTO AL LADO DEL TEXTO */
+
+.entrevista-persona {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  align-items: start;
+  background: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 14px;
+  border: 1px solid #e4dfd2;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.entrevista-foto img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.entrevista-contenido h2 {
+  margin: 5px 0;
+}
+
+.entrevista-contenido h3 {
+  color: var(--verde);
+  font-size: 17px;
+  margin-top: 18px;
+  margin-bottom: 7px;
+}
+
+.edad {
+  color: var(--tierra);
+  font-weight: bold;
+}
+
+/* INTEGRANTES */
+
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.persona {
+  background: white;
+  padding: 18px;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #e4dfd2;
+}
+
+.persona img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.persona h3 {
+  color: var(--verde-oscuro);
+  margin-top: 12px;
+}
+
+/* PIE DE PÁGINA */
+
+.pie-pagina {
+  background: var(--verde-oscuro);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.pie-pagina h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 850px) {
+  .encabezado {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .menu.abierto {
+    display: flex;
+  }
+
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .entrevista-persona {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .portada {
+    min-height: 350px;
+    padding: 55px 7%;
+  }
+
+  .seccion {
+    padding: 45px 6%;
+  }
+
+  .entrevista-persona {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .entrevista-foto img {
+    height: 280px;
+  }
+
+  .equipo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .galeria img {
+    height: 170px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+}
+
+
+
+/* ==========================================
+   NUEVO INICIO - RAICES DE NUESTRA TIERRA
+========================================== */
+
+.inicio-portada {
+  min-height: 440px;
+  padding: 75px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  background: #f7f3e9;
+  overflow: hidden;
+}
+
+.inicio-texto {
+  max-width: 800px;
+}
+
+.inicio-etiqueta {
+  color: #71834f;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.inicio-texto h1 {
+  color: #344936;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.inicio-descripcion {
+  max-width: 720px;
+  color: #393a30;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.inicio-boton {
+  display: inline-block;
+  margin-top: 25px;
+  background: #526747;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 7px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.inicio-boton:hover {
+  background: #344936;
+  transform: translateY(-3px);
+}
+
+.inicio-decoracion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-right: 35px;
+}
+
+.inicio-decoracion span {
+  font-size: 65px;
+}
+
+
+/* PRESENTACIÓN */
+
+.inicio-presentacion {
+  background: #eeeee2;
+  padding: 65px 7%;
+}
+
+.inicio-encabezado {
+  text-align: center;
+  max-width: 850px;
+  margin: auto auto 40px;
+}
+
+.inicio-encabezado > p:first-child {
+  color: #71834f;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.inicio-encabezado h2 {
+  color: #344936;
+  font-size: clamp(26px, 4vw, 36px);
+  margin-top: 12px;
+}
+
+.inicio-linea {
+  width: 70px;
+  height: 4px;
+  background: #82945d;
+  margin: 17px auto;
+  border-radius: 5px;
+}
+
+.inicio-introduccion {
+  color: #45483c;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.inicio-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 23px;
+}
+
+.inicio-tarjeta {
+  background: white;
+  padding: 30px;
+  border-radius: 13px;
+  border: 1px solid #e3dfd2;
+  transition: transform 0.3s;
+}
+
+.inicio-tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.inicio-icono {
+  font-size: 37px;
+  margin-bottom: 12px;
+}
+
+.inicio-tarjeta h3 {
+  color: #526747;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.inicio-tarjeta p {
+  color: #45483c;
+  line-height: 1.8;
+}
+
+
+/* CARRUSEL */
+
+.carrusel-inicio {
+  padding: 70px 7%;
+  background: #f7f3e9;
+}
+
+.carrusel-titulo {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 35px;
+}
+
+.carrusel-titulo p:first-child {
+  color: #71834f;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.carrusel-titulo h2 {
+  color: #344936;
+  font-size: clamp(26px, 4vw, 37px);
+  margin: 12px 0;
+}
+
+.carrusel-titulo p:last-child {
+  color: #45483c;
+  font-size: 16px;
+}
+
+.carrusel {
+  position: relative;
+  max-width: 1100px;
+  height: 430px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #344936;
+}
+
+.carrusel-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  color: white;
+  transform: translateX(100%);
+  transition: transform 0.7s ease;
+  z-index: 1;
+}
+
+.carrusel-slide.activo {
+  transform: translateX(0);
+  z-index: 2;
+}
+
+.carrusel-slide.saliendo {
+  transform: translateX(-100%);
+  z-index: 3;
+}
+
+.carrusel-slide img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+.carrusel-mensaje {
+  padding: 35px;
+}
+
+.carrusel-mensaje .numero {
+  color: #d8c39b;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.carrusel-mensaje h3 {
+  font-size: clamp(23px, 3vw, 34px);
+  line-height: 1.3;
+  margin: 18px 0;
+}
+
+.carrusel-mensaje p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.carrusel-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: white;
+  color: #344936;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.2s;
+}
+
+.carrusel-flecha:hover {
+  background: #d8c39b;
+}
+
+.carrusel-flecha.anterior {
+  left: 12px;
+}
+
+.carrusel-flecha.siguiente {
+  right: 12px;
+}
+
+.carrusel-puntos {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.carrusel-puntos .punto {
+  width: 11px;
+  height: 11px;
+  border: none;
+  border-radius: 50%;
+  background: #b8bea9;
+  cursor: pointer;
+}
+
+.carrusel-puntos .punto.seleccionado {
+  background: #526747;
+  transform: scale(1.3);
+}
+
+
+/* MENSAJE DE CIERRE */
+
+.mensaje-final {
+  max-width: 850px;
+  margin: 45px auto 0;
+  text-align: center;
+  padding: 35px;
+  background: #e8ebdf;
+  border-radius: 15px;
+}
+
+.mensaje-final h2 {
+  color: #344936;
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.mensaje-final p {
+  color: #45483c;
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.mensaje-final strong {
+  display: block;
+  margin-top: 20px;
+  color: #526747;
+  font-size: 17px;
+}
+
+
+/* CELULARES Y TABLETAS */
+
+@media (max-width: 850px) {
+
+  .inicio-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .inicio-decoracion {
+    padding-right: 0;
+  }
+
+  .carrusel-slide {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carrusel-mensaje {
+    padding: 25px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .inicio-portada {
+    padding: 50px 6%;
+  }
+
+  .inicio-decoracion {
+    display: none;
+  }
+
+  .inicio-descripcion {
+    font-size: 17px;
+  }
+
+  .inicio-presentacion,
+  .carrusel-inicio {
+    padding: 45px 6%;
+  }
+
+  .carrusel {
+    height: 520px;
+  }
+
+  .carrusel-slide {
+    grid-template-columns: 1fr;
+    grid-template-rows: 235px 1fr;
+  }
+
+  .carrusel-slide img {
+    height: 235px;
+  }
+
+  .carrusel-mensaje {
+    padding: 20px;
+  }
+
+  .carrusel-mensaje h3 {
+    font-size: 23px;
+  }
+
+  .carrusel-mensaje p {
+    font-size: 15px;
+  }
+
+  .mensaje-final {
+    padding: 25px 18px;
+  }
+
+}
+
+
+
+/* =================================
+   CORRECCIÓN DE LA PORTADA PRINCIPAL
+================================= */
+
+.inicio-portada {
+  min-height: 430px;
+  padding: 65px 8%;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 45px;
+  background: #f7f3e9;
+  overflow: hidden;
+}
+
+.inicio-texto {
+  max-width: 650px;
+  min-width: 0;
+}
+
+.inicio-texto h1 {
+  color: #344936;
+  font-size: clamp(36px, 4.5vw, 58px);
+  line-height: 1.15;
+  margin: 18px 0;
+}
+
+.inicio-descripcion {
+  max-width: 600px;
+  color: #393a30;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.inicio-imagen {
+  width: 100%;
+  max-width: 380px;
+  justify-self: center;
+  text-align: center;
+}
+
+.inicio-imagen img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.inicio-imagen p {
+  color: #526747;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* ADAPTACIÓN PARA TABLETAS */
+
+@media (max-width: 850px) {
+  .inicio-portada {
+    grid-template-columns: 1.1fr 0.9fr;
+    padding: 50px 6%;
+    gap: 25px;
+  }
+
+  .inicio-imagen img {
+    height: 220px;
+  }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+  .inicio-portada {
+    grid-template-columns: 1fr;
+    padding: 45px 7%;
+    gap: 30px;
+  }
+
+  .inicio-texto h1 {
+    font-size: 38px;
+  }
+
+  .inicio-imagen {
+    max-width: 320px;
+  }
+
+  .inicio-imagen img {
+    height: 210px;
+  }
+}
+
+
+/* =================================
+   CELEBRACIONES PROM 2026
+================================= */
+
+.prom-animacion {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(20, 39, 29, 0.97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.prom-contenido {
+  position: relative;
+  padding: 20px;
+}
+
+.prom-contenido h1 {
+  color: #f5d77c;
+  font-size: clamp(35px, 7vw, 75px);
+  text-shadow: 0 0 20px #d6a344;
+  animation: promAparecer 0.8s ease;
+}
+
+.prom-contenido p {
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* Animación de bienvenida */
+#promAnimacion {
+  animation: promDesaparecer 1s ease 2.8s forwards;
+}
+
+/* Animación final */
+#promFinal {
+  display: none;
+  opacity: 0;
+}
+
+#promFinal.mostrar-final {
+  display: flex;
+  animation: promAparecer 0.6s ease forwards;
+}
+
+#promFinal.ocultar-final {
+  animation: promDesaparecer 1s ease forwards;
+}
+
+/* Fuegos artificiales */
+.fuegos {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.chispa {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 0 12px var(--color);
+  animation: promExplosion 1.3s ease-out forwards;
+}
+
+/* Efectos */
+@keyframes promAparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes promDesaparecer {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@keyframes promExplosion {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(
+      calc(-50% + var(--x)),
+      calc(-50% + var(--y))
+    ) scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+/* =================================
+   ANIMACIÓN PROFESIONAL DE PORTADA
+================================= */
+
+.inicio-texto {
+  animation: entradaTexto 1s ease both;
+}
+
+.inicio-imagen {
+  animation: entradaImagen 1.2s ease both;
+}
+
+.inicio-boton {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicio-boton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.inicio-imagen img {
+  transition: transform 0.5s ease;
+}
+
+.inicio-imagen img:hover {
+  transform: scale(1.025);
+}
+
+@keyframes entradaTexto {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entradaImagen {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =================================
+   TARJETAS PROFESIONALES
+================================= */
+
+.inicio-tarjeta {
+  transition: transform 0.35s ease,
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  cursor: default;
+}
+
+.inicio-tarjeta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(52, 73, 54, 0.16);
+  border-color: #a87950;
+}
+
+.inicio-icono {
+  transition: transform 0.35s ease;
+}
+
+.inicio-tarjeta:hover .inicio-icono {
+  transform: scale(1.15);
+}
+
+/* =================================
+   GALERÍA PROFESIONAL
+================================= */
+
+.galeria {
+  gap: 22px;
+}
+
+.galeria img {
+  border-radius: 14px;
+  transition: transform 0.4s ease,
+              box-shadow 0.4s ease,
+              filter 0.4s ease;
+  cursor: pointer;
+}
+
+.galeria img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 12px 28px rgba(52, 73, 54, 0.22);
+  filter: brightness(1.05);
+}
+
+/* PIE DE PAGINA */
+
+.pie-pagina {
+  background: var(--verde-oscuro);
+  color: white;
+  padding: 30px 20px;
+}
+
+.pie-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pie-escudo {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  background: white;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.pie-informacion h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.pie-informacion p {
+  margin: 6px 0;
+  color: #e5eadb;
+}
+
+@media (max-width: 600px) {
+  .pie-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ANIMACIÓN NATURAL DE FONDO */
+
+.fondo-natural {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hoja-flotante {
+  position: absolute;
+  font-size: 22px;
+  opacity: 0.20;
+  animation: flotar 12s linear infinite;
+}
+
+.hoja-flotante:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.hoja-flotante:nth-child(2) {
+  left: 35%;
+  animation-delay: 4s;
+}
+
+.hoja-flotante:nth-child(3) {
+  left: 65%;
+  animation-delay: 2s;
+}
+
+.hoja-flotante:nth-child(4) {
+  left: 88%;
+  animation-delay: 6s;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(110vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-15vh) rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hoja-flotante {
+    animation: none;
+  }
+}
+
+/* PARTICULAS DE LUZ */
+
+.particula {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #d9dba2;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 12px #d9dba2;
+  animation: luz-flotante 7s ease-in-out infinite;
+}
+
+.particula:nth-of-type(5) {
+  left: 20%;
+  top: 30%;
+  animation-delay: 1s;
+}
+
+.particula:nth-of-type(6) {
+  left: 45%;
+  top: 65%;
+  animation-delay: 3s;
+}
+
+.particula:nth-of-type(7) {
+  left: 70%;
+  top: 25%;
+  animation-delay: 2s;
+}
+
+.particula:nth-of-type(8) {
+  left: 90%;
+  top: 75%;
+  animation-delay: 4s;
+}
+
+@keyframes luz-flotante {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) scale(0.7);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-25px) scale(1.3);
+  }
+}
+
+
+/* RECETARIO DE LA AREPA DE CHOCLO */
+
+.recetario-choclo {
+  padding: 55px 25px;
+  text-align: center;
+  background-color: #f7f3e9;
+  border-radius: 18px;
+  margin: 35px 0;
+}
+
+.recetario-choclo h2 {
+  color: #344936;
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.recetario-choclo .descripcion {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.galeria-receta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 30px auto 0;
+  align-items: start;
+}
+.paso-receta {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+}
+
+
+.paso-receta img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.paso-receta h3 {
+  color: #526747;
+  margin: 15px 0 8px;
+}
+
+.paso-receta p {
+  color: #393a30;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+@media (max-width: 750px) {
+  .galeria-receta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .galeria-receta {
+    grid-template-columns: 1fr;
+  }
+
+  .recetario-choclo {
+    padding: 35px 15px;
+  }
+}

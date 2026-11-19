@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voces de Nuestro Territorio</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    .voces-portada {
+      text-align: center;
+      padding: 55px 20px;
+      background: #e5eadb;
+      border-radius: 15px;
+      margin-bottom: 35px;
+    }
+
+    .voces-portada h1 {
+      color: #344936;
+      font-size: 35px;
+    }
+
+    .voces-portada p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    .voces-contenedor {
+      max-width: 1050px;
+      margin: auto;
+      padding: 25px;
+    }
+
+    .voces-titulo {
+      text-align: center;
+      color: #344936;
+      margin-bottom: 30px;
+    }
+
+    .voz-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      background: #f7f3e9;
+      padding: 22px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .voz-card img {
+      width: 200px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .voz-info {
+      flex: 1;
+    }
+
+    .voz-info h2 {
+      color: #344936;
+    }
+
+    .voz-info p {
+      line-height: 1.7;
+    }
+
+    .voz-info h3 {
+      color: #526747;
+      font-size: 16px;
+    }
+
+    .voz-info audio {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .voz-etiqueta {
+      display: inline-block;
+      background: #e5eadb;
+      color: #344936;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .voz-card {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .voz-card img {
+        width: 100%;
+        height: 250px;
+      }
+
+      .voces-portada h1 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <div class="logo">🌱 Raíces de Nuestra Tierra</div>
+
+    <button id="menuToggle" class="menu-toggle"
+      aria-label="Abrir menú" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav id="menu">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#proyecto">Proyecto</a>
+      <a href="index.html#soberania">Soberanía alimentaria</a>
+      <a href="index.html#territorio">Territorio</a>
+      <a href="entrevistar.html">Entrevistas</a>
+      <a href="voces.html" class="activo">Voces de nuestro territorio</a>
+      <a href="index.html#integrantes">Integrantes</a>
+    </nav>
+  </header>
+
+  <main class="voces-contenedor">
+
+    <section class="voces-portada">
+      <h1>Voces de Nuestro Territorio</h1>
+
+      <p>
+        En este espacio compartimos las voces de las
+        personas que nos brindaron sus conocimientos
+        y experiencias sobre la soberanía alimentaria.
+        Sus testimonios nos permiten conocer las
+        tradiciones y los saberes de San Lorenzo.
+      </p>
+    </section>
+
+    <h2 class="voces-titulo">Nuestros entrevistados</h2>
+
+    <!-- PRIMER ENTREVISTADO -->
+    <section class="voz-card">
+
+      <img src="imagenes/karen.jpg" alt="Orlando Betancourt">
+
+      <div class="voz-info">
+
+        <span class="voz-etiqueta">Persona entrevistada</span>
+
+        <h2>Orlando Betancourt</h2>
+
+        <p>
+          Nos comparte sus conocimientos sobre los
+          cultivos tradicionales, las enseñanzas de
+          sus abuelos y la importancia del maíz y el frijol.
+        </p>
+
+        <h3>Escuchar su testimonio</h3>
+
+        <audio controls preload="none">
+          <source src="audios/sonido2.m4a" type="audio/mp4">
+          Tu navegador no puede reproducir este audio.
+        </audio>
+
+      </div>
+    </section>
+
+    <!-- SEGUNDO ENTREVISTADO -->
+    <section class="voz-card">
+
+      <img src="imagenes/evi.jpg" alt="Evelio Lengua">
+
+      <div class="voz-info">
+
+        <span class="voz-etiqueta">Persona entrevistada</span>
+
+        <h2>Evelio Lengua</h2>
+
+        <p>
+          Nos comparte sus experiencias y conocimientos
+          sobre nuestro territorio y la importancia
+          de conservar las tradiciones alimentarias.
+        </p>
+
+        <h3>Escuchar su testimonio</h3>
+
+        <audio controls preload="none">
+          <source src="audios/sonido3.m4a" type="audio/mp4">
+          Tu navegador no puede reproducir este audio.
+        </audio>
+
+      </div>
+    </section>
+
+    <section class="voces-portada">
+
+      <h2>Las voces que conservan nuestra historia</h2>
+
+      <p>
+        Cada testimonio representa una parte de nuestra
+        identidad, nuestras raíces y nuestros saberes.
+      </p>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
